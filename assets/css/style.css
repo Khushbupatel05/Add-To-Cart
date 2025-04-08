@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    text-decoration: none !important;
+    list-style: none;
+    font-family: "Roboto Slab", serif;
+}
+.top-header{
+    background-color: #444444;
+}
+.main-menu {
+    position: sticky ;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 3px #0003;
+}
+.img-bg{
+    background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li a{
+    font-family: Roboto Slab;
+    font-size: 15px;
+    font-weight: 600;
+    color: #5e3c3e;
+}
+.img-bg{
+    background-image: url(../img/bg-slide-1.jpg) ; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text-1{
+    font-family: "Roboto", sans-serif;
+    font-size: 5px;
+    color: #9a9795;
+  }
+.cake-name{
+    font-family: "Pacifico", cursive;
+   
+}
+.section-2{
+    transform: translateY(-100px);
+    height: 100%;
+}
+.text{
+    color: #5e3c3e;
+    padding-top: 20px;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.section-3{
+    background-image: url("../img/slider222.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+.btn-card{
+   color: #e47277;
+   background-color: #fff;
+   font-size: 12px;
+   /* margin-bottom: -90px; */
+   transform: translateY(21px);
+   border: 1px solid rgba(122, 120, 120, 0.314);
+}
+.btn-card:hover{
+    background-color: #e47277;
+    color: #fff;
+}
+.cart-page{
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+.cart-img {
+    height: 136px;
+    width: 140px;
+}
