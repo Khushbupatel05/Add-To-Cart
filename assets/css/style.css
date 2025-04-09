@@ -12,6 +12,11 @@
     z-index: 999;
     box-shadow: 0 2px 3px #0003;
 }
+ .title{
+    font-family: "Pacifico", cursive;
+    color: #5e3c3e;
+ }
+
 .img-bg{
     background-image: url("");
     background-position: center;
@@ -57,6 +62,7 @@ li a{
   }
 .cake-name{
     font-family: "Pacifico", cursive;
+    color: #e47277;
    
 }
 .section-2{
@@ -66,6 +72,9 @@ li a{
 .text{
     color: #5e3c3e;
     padding-top: 20px;
+}
+.content{
+    color: #989695;
 }
 .card-img{
     width: 100%;

@@ -83,6 +83,14 @@ function addToCart(productId) {
             productToAdd.quantity = 1;
             cartArr.push(productToAdd);
         }
+        Swal.fire({
+          icon: "success",
+          text: "Item added !",
+          position: 'top',
+          toast: 'true',
+          showConfirmButton: false,
+          timer: 1500,
+      });
     }
 
     localStorage.setItem("cart", JSON.stringify(cartArr));
