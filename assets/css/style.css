@@ -4,9 +4,7 @@
     list-style: none;
     font-family: "Roboto Slab", serif;
 }
-.top-header{
-    background-color: #444444;
-}
+
 .main-menu {
     position: sticky ;
     top: 0;

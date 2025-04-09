@@ -20,11 +20,11 @@ function deleteItem(index) {
 }
 
 function updateQuantity(index, value) {
-    let newQty = cartArr[index].quantity + value;
-    if (newQty <= 0) {
+    let newQuantity = cartArr[index].quantity + value;
+    if (newQuantity <= 0) {
         deleteItem(index);
     } else {
-        cartArr[index].quantity = newQty;
+        cartArr[index].quantity = newQuantity;
         saveCart();
         displayCart();
     }
@@ -42,10 +42,14 @@ function displayCart() {
             </div>
         `
         cartImage.classList.remove("d-none");
+        cart-lable.classList.remove("d-none")
         return;
+    }else{
+
+        cartImage.classList.add("d-none");
     }
 
-    cartImage.classList.add("d-none");
+    
 
     cartArr.forEach((item, index) => {
         let subTotal = item.price * item.quantity;
@@ -84,11 +88,11 @@ function displayCart() {
     cartItems.innerHTML = `
         <h5 class="fw-bold">Total Order</h5>
         <div class="d-flex justify-content-between py-2">
-            <span>Subtotal</span>
+            <span>SubTotal</span>
             <span>$${total}</span>
         </div>
         <div class="d-flex justify-content-between py-2">
-            <span>Shipping</span>
+            <span>Shipping Charges</span>
             <span>$0</span>
         </div>
         <hr>
