@@ -85,7 +85,7 @@ function addToCart(productId) {
         }
         Swal.fire({
           icon: "success",
-          text: "Item added !",
+          text: "add to cart!",
           position: 'top',
           toast: 'true',
           showConfirmButton: false,

@@ -60,7 +60,7 @@ function displayCart() {
         showCart.innerHTML += `
             <div class="row align-items-center py-3">
                 <div class="product-image col-sm-6 col-3 d-flex align-items-center   gap-3">
-                    <img src="${item.img}" width="100%" class="border rounded" alt="img-item">
+                    <img src="${item.img}" width="100" class="border rounded" alt="img-item">
                     <div>${item.name}</div>
                 </div>
                 <div class="col-sm-2 col-3 text-center">$${item.price}</div>
