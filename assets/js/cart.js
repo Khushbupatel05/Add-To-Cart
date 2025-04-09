@@ -3,6 +3,9 @@ let counter = document.getElementById("counter");
 let showCart = document.getElementById("show-cart");
 let cartItems = document.getElementById("cartItems");
 let cartImage = document.getElementById("cartImage");
+let cakeLabel = document.getElementById("cake-lable")
+let emptyImg = document.getElementById("empty-img")
+
 
 function updateCartCounter() {
     counter.innerText = cartArr.length;
@@ -35,18 +38,16 @@ function displayCart() {
     cartItems.innerHTML = "";
     let total = 0;
 
-    if (cartArr.length === 0) {
-        cartItems.innerHTML = `
-            <div>
-                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdn4IV1PUIxZ_k9OT4tH0-8F9EahEW6CuDpg&s" alt="emptycart">
-            </div>
-        `
+    if (cartArr.length == 0) {
+       
         cartImage.classList.remove("d-none");
-        cart-lable.classList.remove("d-none")
+        cakeLabel.classList.add("d-none")
+        emptyImg.classList.remove("d-none")
         return;
     }else{
-
         cartImage.classList.add("d-none");
+        cakeLabel.classList.remove("d-none")
+        emptyImg.classList.add("d-none")
     }
 
     

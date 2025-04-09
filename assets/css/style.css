@@ -73,6 +73,13 @@ li a{
     top: 0;
     left: 0;
 }
+.cart-bg{
+    background-image: url(../img/bg_header.jpg) ; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
 .section-3{
     background-image: url("../img/slider222.webp");
     background-position: center;
