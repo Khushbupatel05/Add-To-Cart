@@ -15,13 +15,22 @@
 <body>
     <header class="postion-sticky ">
         <div class="container">
-            <div class=".row">
+            <div class="row">
                 <div class="d-flex py-3 justify-content-between align-items-center">
-                    <div class="">
-                        <a href="./index.html">
-                            <img src="./assets/img/logo (1).png" alt="" class="">
-                        </a>
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="col-auto d-md-none">
+                            <button class="btn fs-4 text-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                aria-controls="staticBackdrop">
+                                <i class="bi bi-list icon-menu"></i>
+                            </button>
+                        </div>
+                        <div class="">
+                            <a href="./index.html">
+                                <img src="./assets/img/logo (1).png" alt="" class="">
+                            </a>
+                        </div>
                     </div>
+                    
                     <div class=" d-flex gap-3  align-items-center">
                         <div class="d-none d-lg-flex">
                             <ul class="d-flex gap-3 fw-semibold ">
@@ -45,13 +54,8 @@
                 </div>
             </div>
 
-            <div class="col-auto d-md-none">
-                <button class="btn border-black " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
-                    aria-controls="staticBackdrop">
-                    <i class="bi bi-list icon-menu"></i>
-                </button>
-            </div>
-
+        
+           
 
             <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
                 aria-labelledby="staticBackdropLabel">
@@ -96,8 +100,8 @@
     <section>
         <div class="container">
             <div class="row py-5 d-none gy-4" id="cake-lable" >
-                <div class="col-xl-9 col-lg-8 col-12 col-md-9 ">
-                    <div class="row d-md-flex  py-3 ">
+                <div class="col-xl-9 col-lg-8 col-12 col-md-9">
+                    <div class="row d-md-flex  py-2  d-none d-md-block">
                         <div class="col-sm-6 col-3">
                             <div class="text-start">
                                 Product
@@ -124,6 +128,10 @@
                 <div class="col-md-3 mt-md-4 col-12">
                     <div class="checkOut border p-3 rounded" id="cartItems">
 
+                    </div>
+
+                    <div class="text-end pt-3">
+                        <button class="btn border clear-btn "  onclick='removeAll()'> Clear All</button>
                     </div>
                 </div>
             </div>

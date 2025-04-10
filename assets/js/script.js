@@ -103,7 +103,7 @@ products.forEach((product, idx) => {
       <div class="p-2 ">
         <div class="card m-2 ">
           <div class="text-center align-items-center card-img ">
-            <img src="${product.img}" alt="${product.name}">
+            <img src="${product.img}" alt="${product.name}" width="100%">
           </div>
           <div class="m-2 text-center ps-4 pe-4 text">
             <h6>${product.name}</h6>

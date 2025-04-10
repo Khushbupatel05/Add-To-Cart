@@ -32,7 +32,11 @@ function updateQuantity(index, value) {
         displayCart();
     }
 }
-
+function removeAll(){
+    cartArr = [];
+    saveCart();
+    displayCart();
+}
 function displayCart() {
     showCart.innerHTML = "";
     cartItems.innerHTML = "";
@@ -58,13 +62,13 @@ function displayCart() {
 
         
         showCart.innerHTML += `
-            <div class="row align-items-center py-3">
-                <div class="product-image col-sm-6 col-3 d-flex align-items-center   gap-3">
+            <div class="row align-items-center py-3 gy-3">
+                <div class="product-image col-md-6 col-12 d-flex align-items-center   gap-3">
                     <img src="${item.img}" width="100" class="border rounded" alt="img-item">
                     <div>${item.name}</div>
                 </div>
-                <div class="col-sm-2 col-3 text-center">$${item.price}</div>
-                <div class="col-sm-2 col-3 text-center">
+                <div class="col-md-2 col-4 text-center">$${item.price}</div>
+                <div class="col-md-2 col-4 text-center">
                     <div class="d-flex  align-items-center gap-2">
                         <button class="btn btn-sm btn-light" onclick="updateQuantity(${index}, -1)">
                         <i class="bi bi-dash"></i>
@@ -75,7 +79,7 @@ function displayCart() {
                         </button>
                     </div>
                 </div>
-                <div class="col-sm-2 col-3 d-flex justify-content-center align-items-center gap-3">
+                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center gap-3">
                     <span>$${subTotal}</span>
                     <button class="btn btn-sm " onclick="deleteItem(${index})">
                     Remove
