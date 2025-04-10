@@ -60,7 +60,7 @@ let products = [
     img: "https://cakeart.thimpress.com/wp-content/uploads/2015/11/cake2-270x240.jpg",
     price: 15,
   },
-  
+
 ]
 const productsElement = document.getElementById("product");
 let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
@@ -68,37 +68,37 @@ let counter = document.getElementById("counter");
 counter.innerHTML = cartArr.length;
 
 function addToCart(productId) {
-    let product = cartArr.find((obj) => obj.id === productId);
+  let product = cartArr.find((obj) => obj.id === productId);
 
-    if (product) {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Already added!",
-        });
-    } else {
-        let productToAdd = products.find((obj) => obj.id === productId);
+  if (product) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Already added!",
+    });
+  } else {
+    let productToAdd = products.find((obj) => obj.id === productId);
 
-        if (productToAdd) {
-            productToAdd.quantity = 1;
-            cartArr.push(productToAdd);
-        }
-        Swal.fire({
-          icon: "success",
-          text: "add to cart!",
-          position: 'top',
-          toast: 'true',
-          showConfirmButton: false,
-          timer: 1500,
-      });
+    if (productToAdd) {
+      productToAdd.quantity = 1;
+      cartArr.push(productToAdd);
     }
+    Swal.fire({
+      icon: "success",
+      text: "add to cart!",
+      position: 'top',
+      toast: 'true',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  }
 
-    localStorage.setItem("cart", JSON.stringify(cartArr));
-    counter.innerHTML = cartArr.length;
+  localStorage.setItem("cart", JSON.stringify(cartArr));
+  counter.innerHTML = cartArr.length;
 }
 
 products.forEach((product, idx) => {
-  productsElement.innerHTML +=`
+  productsElement.innerHTML += `
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
       <div class="p-2 ">
         <div class="card m-2 ">
@@ -127,10 +127,15 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
   },
   mousewheel: true,
   keyboard: true,
-  
+
 });
